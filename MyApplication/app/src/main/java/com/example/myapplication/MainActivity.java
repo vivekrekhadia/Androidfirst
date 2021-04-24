@@ -25,18 +25,32 @@ public class MainActivity extends AppCompatActivity {
                 openActivity2();
             }
         });
+        Button button1 = (Button) findViewById(R.id.button2);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity4();
+            }
+        });
     }
     public void openActivity2() {
         EditText editText2 = (EditText) findViewById(R.id.edittext2);
         DatePicker data1 = (DatePicker) findViewById(R.id.data);
-        int data = data1.getDayOfMonth();
+        int day = data1.getDayOfMonth();
+        int month = data1.getMonth();
+        int year = data1.getYear();
         EditText editText1 = (EditText) findViewById(R.id.edittext1);
         String text1 = editText1.getText().toString();
         String text2 = editText2.getText().toString();
         Intent intent = new Intent(this, Activity2.class);
         intent.putExtra(EXTRA_TEXT, text1);
-        Denem dene = new Denem(text1,text2,data);
+        Denem dene = new Denem(text1,text2,day,month,year);
+        ((UserData) this.getApplication()).putList(dene);
         intent.putExtra("sampleObject", dene);
+        startActivity(intent);
+    }
+    public void openActivity4() {
+        Intent intent = new Intent(this, Activity4.class);
         startActivity(intent);
     }
 }

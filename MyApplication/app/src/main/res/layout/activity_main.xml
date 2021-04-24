@@ -36,15 +36,23 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="We are available 24/7!"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="540dp"
         android:textSize="30sp" />
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
         android:text="Book Apointment" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="View Apointment" />
 
 </RelativeLayout>

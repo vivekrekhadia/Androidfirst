@@ -18,6 +18,6 @@ public class Activity2 extends AppCompatActivity {
         Denem dene = (Denem)intent.getSerializableExtra("sampleObject");
         textView1.setText(dene.getId());
         textView2.setText(dene.getName());
-        textView3.setText(""+dene.getData());
+        textView3.setText(""+dene.getDay());
     }
 }

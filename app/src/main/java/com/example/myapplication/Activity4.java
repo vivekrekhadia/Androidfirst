@@ -63,7 +63,7 @@ public class Activity4 extends AppCompatActivity {
             text3.setText("No Appointments!");
         } else{
             if(index>0){
-                text1.setText("1. "+usrData[0].getName()+ " "+usrData[0].getDay()+"/"+usrData[0].getMonth()+"/"+usrData[0].getYear()+"");
+                text1.setText("1. "+usrData[0].getId()+" "+ usrData[0].getName()+ " "+usrData[0].getDay()+"/"+usrData[0].getMonth()+"/"+usrData[0].getYear()+"");
                 if(index>1){
                     text2.setText("2. "+usrData[1].getName()+ " "+usrData[1].getDay()+"/"+usrData[1].getMonth()+"/"+usrData[1].getYear()+"");
                     if(index>2){
